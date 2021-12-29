@@ -1,1 +1,1 @@
-ProjectEuler problem 1-10
+it-academy lessons
