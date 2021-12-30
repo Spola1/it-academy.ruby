@@ -8,7 +8,7 @@ answer = ""
 @t = gets.chomp
 @t.upcase!
 
-for i in 0...@t.length
+(0...@t.length).each do |i|
   ('A'..'Z').each_with_index do |letter, id|
     if letter == @t[i]
       array.push(id)
@@ -20,7 +20,7 @@ for i in 0...@t.length
 end
 @h.times do
   @row = gets.chomp
-  for j in 0...array.length
+  (0...array.length).each do |j|
     a = array[j]*@l
     b = a + @l-1
     answer = answer + @row[a..b]
@@ -28,4 +28,5 @@ end
   rows << answer
   answer = ""
 end
+
 puts rows
