@@ -12,7 +12,7 @@ answer2 = ""
 
 # конвертируем в двоичный код
 array = @message.split(//)
-for i in 0...array.length
+(0...array.length).each do |i|
   char = array[i].unpack("B*") #.unpack("B*") распаковывает символ в виде двоичного кода
   char = char.join
   char = char[1...char.length]
@@ -20,7 +20,7 @@ for i in 0...array.length
 end
 # конвертируем из двоичного согласно условия
 one = 2
-for j in 0...answer.length
+(0...answer.length).each do |j|
   if answer[j] == "1"
     one!=1 ? answer2 += " 0 0" : answer2 += "0";one=1
   elsif answer[j] == "0"
